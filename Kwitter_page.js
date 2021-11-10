@@ -24,7 +24,7 @@ function send(){
            like:0
      });
 
-     document.getElementById("msg").value="";
+     document.getElementById("msg").innerHTML="";
 }
 
 function getData() { firebase.database().ref("/"+room_name).on('value', function(snapshot) { document.getElementById("output").innerHTML = ""; snapshot.forEach(function(childSnapshot) { childKey  = childSnapshot.key; childData = childSnapshot.val(); if(childKey != "purpose") {
